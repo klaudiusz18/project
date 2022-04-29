@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="assets/css/info-modal.css">
+	<script type="text/javascript" src="assets/js/functions.js"></script>
+	<title>IPLANIT</title>
+</head>
+<body>
+	<div id="overlay"></div>
+	<div class="modal hide">
+		<div class="modal-header">
+			<h4 class="title">Task Title</h4>
+			<button class="close-button">&times;</button>
+		</div><!-- Modal Header -->
+
+		<div class="modal-content">
+			<div class="modal-images">
+				<div class="image"><img src="./assets/img/cutting.PNG" alt="info"></div>
+				<div class="image"><img src="./assets/img/cutting.PNG" alt="info"></div>
+				<div class="image"><img src="./assets/img/cutting.PNG" alt="info"></div>
+				<div class="button">
+					<button>&oplus;</button>
+				</div>
+			</div> <!-- Modal Images -->
+
+			<div class="modal-info">
+				<h4>Task Instructions</h4>
+				<ul>
+					<li>Integer lobortis pharetra viverra.</li>
+					<li>Integer lobortis pharetra viverra.</li>
+					<li>Integer lobortis pharetra viverra.</li>
+				</ul>
+			</div> <!-- Modal Info-->
+
+			<div class="modal-comments">
+				<h4>Comments</h4>
+				<p>Integer lobortis pharetra viverra. Donec a pulvinar augue. Nullam consectetur vel nisi quis iaculis.</p>
+			</div> <!-- Modal Comments -->
+		</div>
+	</div>
+
+
+	<!-- CONTENT -->
+	
+	<section id="content">
+		<!-- NAVBAR -->
+		
+		<nav>
+
+			</a>
+			<a href="#" class="profile">
+				<img src="./assets/img/people.jfif">
+			</a>
+			<a href="#" class="nav-link">John love</a>
+			
+			<i class='bx bx-plus' ></i>
+						<i class='bx bx-search' ></i>
+						<i class='bx bx-filter' ></i>
+			
+			<a href="#" class="notification">
+				<i class='bx bxs-bell' ></i>
+				<span class="num">1</span>
+				
+			</a>
+			
+			
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Action Plan</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#"> Tasks </a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">View All</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<ul class="box-info">
+				<li>
+					<i class='bx bx-list-ul' ></i>
+					<span class="text">
+						<h3>View All</h3>
+						<p>Task</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bx-calendar-exclamation'></i>
+					<span class="text">
+						<h3>Started </h3>
+						<p>In Process</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bx-calendar-check'></i>
+					<span class="text">
+						<h3>Done</h3>
+						<p> Completed </p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bx-task-x' ></i>
+					
+					<span class="text">
+						<h3>Not Done</h3>
+						<p> Task</p>
+						
+					</span>
+				</li>
+				
+			</ul>
+
+
+			<div class="table-data">
+				<div class="action">
+					<div class="head">
+						<h3>Recent Tasks (10)</h3>
+						
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th>Progress</th>
+								<th>Task Instructions</th>
+								<th>Media</th>
+								<th>Due Date</th>
+								<th>Status</th>
+								
+								
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+						
+										
+							<tr>
+							<!--Progress bar starts here-->
+								<td>
+									<div class = "box">
+										<svg>
+											<circle cx="60" cy="60" r="50"></circle>
+										</svg>
+										<div class="counter">0</div>
+										<div class="stop"></div>
+									</div>
+								</td>
+								
+								<td>
+								<h1>Barber Shop</h1><p>Get ready for gym </p>
+									<a class="btn-show-modal" href="#">Show More</a>
+									</p></td>
+								<td>
+									<img src="./assets/img/addmore.png">
+									<img src="./assets/img/cutting.png">
+								</td>
+								<td>03-03-2022</td>
+								<td><span class="status Done">Done</span></td>
+							</tr>
+							
+							<tr>
+								<td>
+									<div class = "box">
+										<svg>
+											<circle cx="60" cy="60" r="50"></circle>
+										</svg>
+										<div class="counter">0</div>
+										<div class="stop"></div>
+									</div>
+								</td>
+								</td>
+								<td>
+									<h1>Read Book</h1>
+									<p>For instructions click</p>
+									<a class="btn-show-modal" href="#">Show More</a>
+									</p>
+								<td>
+									<img src="./assets/img/addmore.png">
+									<img src="./assets/img/book.jpg">	
+								</td>
+								<td>04-03-2022</td>
+								<td><span class="status notdone">Not Done</span></td>
+							</tr>
+							
+							<tr>
+								<td>
+									<div class = "box">
+										<svg>
+											<circle cx="60" cy="60" r="50"></circle>
+										</svg>
+										<div class="counter">0</div>
+										<div class="stop"></div>
+									</div>
+								</td>							
+								<td>
+									<h1>Exercise</h1>
+									<p>Get ready for gym </p>
+									<a class="btn-show-modal" href="#">Show More</a>
+								</td>
+								<td>
+									<img src="./assets/img/addmore.png">
+									<img src="./assets/img/exercise.jpg">
+									<img src="./assets/img/exercise.jpg">
+								</td>
+								<td>05-03-2022</td>
+								<td><span class="status process">Process</span></td>
+							</tr>
+								
+							
+							<tr>
+								<td>
+									<div class = "box">
+										<svg>
+											<circle cx="60" cy="60" r="50"></circle>
+										</svg>
+										<div class="counter">0</div>
+										<div class="stop"></div>
+									</div>
+								</td>
+								<td>
+								<h1>Set your cloth</h1>
+									<p>Put your cloth in </p>
+									<a class="btn-show-modal" href="#">Show More</a>
+									</p>
+								</td>
+								<td>	
+									<img src="./assets/img/addmore.png">
+									<img src="./assets/img/set_cloth.jfif">
+									
+								</td>
+								<td>05-03-2022</td>
+								<td><span class="status Done">Done</span></td>
+								
+							</tr>
+							
+							<tr>
+								<td>
+											<a href="#">Back on top</a>
+								</td>	
+								
+								
+								
+							</tr>
+							
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	
+	<script type="text/javascript">
+		const counter = document.querySelectorAll(".counter");
+
+		var a = 0;
+		var run = setInterval(frames,60);
+		function frames()
+		{
+    		a = a + 1;
+    		if(a == 101)
+			{
+        		clearInterval(run);
+    		}
+			else
+			{
+				counter.forEach((count) => {
+					count.textContent = a + "%";
+				});
+    		}
+		}
+
+
+		setTimeout(stopPoint,8000);
+		function stopPoint(){
+			var stop = document.querySelector(".stop");
+			stop.style.display = "block";
+		} 
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="assets/css/form-modal.css">
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="assets/js/functions.js"></script>
+        <script type="text/javascript" src="assets/js/form-jquery.js"></script>
+        <script type="text/javascript" src="assets/js/media-form.js"></script>
+        
+    </head>
+    <body>
+        <div id="overlay"></div>
+
+        <div class="modal">
+            <div class="modal-header">
+                <div class="modal-btn">
+                    <button class="close-button">&times;</button>
+                </div>
+                
+                <div class="progressbar">
+                    <div class="progress" id="progress"></div>
+
+                    <div class="progress-step progress-step-active" data-title="SELECT"></div>
+                    <div class="progress-step" data-title="REVIEW"></div>
+                    <div class="progress-step" data-title="UPLOAD"></div>
+                </div>
+            </div> <!-- Modal Header -->
+
+            <div class="modal-content">
+                <form action="upload.php" method="post" id="upload-form" enctype="multipart/form-data">
+                    <div class="form-step form-step-active">
+                        <div class="modal-options">
+                            <div class="image"><img src="./assets/img/cutting.PNG" alt="image"></div>
+                            <div class="image"><img src="./assets/img/cutting.PNG" alt="video"></div>
+                            <div class="image"><img src="./assets/img/cutting.PNG" alt="audio"></div>
+                        </div> <!-- Modal Images -->
+                        <div id="hide-btn-form" class="btn-group hide-btn">
+                            <a href="#" class="btn btn-exit">CANCEL</a>
+                            <a href="#" class="btn btn-next">NEXT</a>
+                        </div>
+                    </div>
+
+                    <!-- PHOTO START --> 
+                    <div class="form-step">
+                        <h1>Photo</h1>
+                        <input type="file" name="file">
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-prev">BACK</a>
+                            <a href="#" class="btn btn-end">NEXT</a>
+                        </div>
+                    </div> <!-- PHOTO END -->
+                    
+                    <!-- VIDEO START -->
+                    <div class="form-step">
+                        <h1>Video</h1>
+                        <input type="file" name="file">
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-prev">BACK</a>
+                            <a href="#" class="btn btn-end">NEXT</a>
+                        </div>
+                    </div> <!-- VIDEO END -->
+
+                    <!-- AUDIO START -->
+                    <div class="form-step"> 
+                        <h1>Audio</h1>
+                        <input type="file" name="file">
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-prev">BACK</a>
+                            <a href="#" class="btn btn-end">NEXT</a>
+                        </div>
+                    </div> <!-- AUDIO END -->
+                    
+                    <div class="form-step">
+                        <h1>FINAL</h1>
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-prev">CANCEL</a>
+                            <a href="#" class="btn btn-upload">UPLOAD</a>
+                        </div>
+                    </div>
+                </form> <!-- Form -->
+            </div>
+        </div>
+    </body>
+</html>

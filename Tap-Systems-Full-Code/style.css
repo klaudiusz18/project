@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+p {
+	font-size: 18px;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+:root {
+	--poppins: 'Poppins', sans-serif;
+	--lato: 'Lato', sans-serif;
+
+	--light: #F9F9F9;
+	--dark: #342E37;
+	--blue: #3C91E6;
+	--light-blue: #CFE8FF;
+	--grey: #eee;
+	--dark-grey: #AAAAAA;
+	--red: #DB504A;
+	--light-red: #ffa07a;
+	--yellow: #FFCE26;
+	--light-yellow: #FFF2C6;
+	--orange: #FD7238;
+	--light-orange: #FFE0D3;
+	--green: #008000;
+	--light-green: #98fb98;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+body.dark {
+	--light: #0C0C1E;
+	--grey: #060714;
+	--dark: #FBFBFB;
+}
+
+body {
+	background: var(--grey);
+	overflow-x: hidden;
+}
+
+
+
+#content {
+	position: relative;
+	width: calc(115% - 280px);
+	left: 40px;
+	transition: .3s ease;
+}
+
+.box{
+	height: 15%;
+	width: 30%;
+	position: relative;
+	border-radius: 15%;
+}
+
+.box svg{
+	height: 150px;
+	width: 200px;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.box svg circle{
+	fill: transparent;
+	stroke: #007eff;
+	stroke-width: 10;
+	stroke-linecap: round;
+	stroke-dasharray: 500;
+	stroke-dashoffset: 500;
+	animation: animate 10s linear infinite;
+}
+
+@keyframes animate{
+	100%{
+		stroke-dashoffset: 0;
+
+	}
+}
+
+.box .stop{
+	height: 110px;
+	width: 110px;
+	background: transparent;
+	border-radius: 50%;
+	position: absolute;
+	left: 37%;
+	top: 25.5%;
+	transform: translate(-50%,-50%);
+	display: none;
+}
+
+
+
+.box .counter{
+	position: absolute;
+	left: 42%;
+	top: 25%;
+	transform: translate(-50%,-50%);
+	font-size: 25px;
+	color: black;
+}
+
+
+
+
+/* NAVBAR */
+#content nav {
+	height: 56px;
+	background: var(--light);
+	padding: 0 24px;
+	display: flex;
+	align-items: center;
+	grid-gap: 24px;
+	font-family: var(--lato);
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 1500;
+	border-radius: 5px;
+}
+
+#content nav .nav-link {
+	font-size: 18px;
+	transition: .3s ease;
+}
+#content nav .nav-link:hover {
+	color: var(--blue);
+}
+
+
+#content nav .notification {
+	font-size: 20px;
+	position: relative;
+}
+#content nav .notification .num {
+	position: absolute;
+	top: -6px;
+	right: -6px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 2px solid var(--light);
+	
+	background: var(--red);
+	color: var(--light);
+	font-weight: 700;
+	font-size: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#content nav .profile img {
+	width: 36px;
+	height: 36px;
+	object-fit: cover;
+	border-radius: 25%;
+}
+
+/* NAVBAR */
+
+
+
+
+
+/* MAIN */
+#content main {
+	width: 100%;
+	padding: 26px 24px;
+	font-family: var(--poppins);
+	max-height: calc(180vh - 56px);
+	overflow-y: auto;
+}
+#content main .head-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	grid-gap: 16px;
+	flex-wrap: wrap;
+	
+}
+#content main .head-title .left h1 {
+	font-size: 36px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	color: var(--dark);
+	
+}
+#content main .head-title .left .breadcrumb {
+	display: flex;
+	align-items: center;
+	grid-gap: 16px;
+}
+#content main .head-title .left .breadcrumb li {
+	color: var(--dark);
+}
+#content main .head-title .left .breadcrumb li a {
+	color: var(--dark-grey);
+	pointer-events: none;
+}
+#content main .head-title .left .breadcrumb li a.active {
+	color: var(--blue);
+	pointer-events: unset;
+}
+
+
+
+
+
+#content main .box-info {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	grid-gap: 24px;
+	margin-top: 36px;
+}
+#content main .box-info li {
+	padding: 24px;
+	background: var(--light);
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	grid-gap: 24px;
+}
+#content main .box-info li .bx {
+	width: 80px;
+	height: 80px;
+	border-radius: 10px;
+	font-size: 36px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/*navigation icon colors*/
+
+
+#content main .box-info li:nth-child(1) .bx {
+	background: var(--light-blue);
+	color: var(--blue);
+}
+#content main .box-info li:nth-child(2) .bx {
+	background: var(--light-yellow);
+	color: var(--yellow);
+}
+#content main .box-info li:nth-child(3) .bx {
+	background: var(--light-green);
+	color: var(--green);
+}
+#content main .box-info li:nth-child(4) .bx {
+	background: var(--light-red);
+	color: var(--red);
+}
+#content main .box-info li .text h3 {
+	font-size: 24px;
+	font-weight: 600;
+	color: var(--dark);
+}
+#content main .box-info li .text p {
+	color: var(--dark);	
+}
+
+
+
+
+
+#content main .table-data {
+	display: flex;
+	flex-wrap: wrap;
+	grid-gap: 24px;
+	margin-top: 24px;
+	width: 100%;
+	color: var(--dark);
+}
+#content main .table-data > div {
+	border-radius: 20px;
+	background: var(--light);
+	padding: 24px;
+	overflow-x: auto;
+}
+#content main .table-data .head {
+	display: flex;
+	align-items: center;
+	grid-gap: 16px;
+	margin-bottom: 24px;
+}
+#content main .table-data .head h3 {
+	margin-right: auto;
+	font-size: 24px;
+	font-weight: 600;
+}
+#content main .table-data .head .bx {
+	cursor: pointer;
+}
+
+#content main .table-data .action {
+	flex-grow: 1;
+	flex-basis: 500px;
+}
+#content main .table-data .action table {
+	
+	width: 100%;
+	border-collapse: collapse;
+}
+#content main .table-data .action table th {
+	padding-bottom: 12px;
+	font-size: 18px;
+	text-align: left;
+	border-bottom: 1px solid var(--grey);
+}
+#content main .table-data .action table td {
+	
+	padding: 16px 0;
+}
+#content main .table-data .action table tr td:first-child {
+	
+	
+	display: flex;
+	align-items: center;
+	grid-gap: 12px;
+	padding-left: 10px;
+}
+#content main .table-data .action table tr1 td1:first-child {
+	border-left: 10px solid var(--orange);
+	
+	display: flex;
+	align-items: center;
+	grid-gap: 12px;
+	padding-left: 10px;
+}
+#content main .table-data .action table td img {
+	width: 50px;
+	height: 50px;
+	margin-right:6px;
+	border-radius: 15%;
+	object-fit: cover;
+}
+#content main .table-data .action table tbody tr:hover {
+	background: var(--grey);
+	
+}
+#content main .table-data .action table tr td .status {
+	font-size: 14px;
+	padding: 6px 16px;
+	color: var(--light);
+	border-radius: 10px;
+	font-weight: 700;
+
+}
+#content main .table-data .action table tr td .status.Done {
+	background: var(--green);
+}
+#content main .table-data .action table tr td .status.process {
+	background: var(--yellow);
+}
+#content main .table-data .action table tr td .status.notdone {
+	background: var(--red);
+}
+
+
+#content main .table-data .todo {
+	flex-grow: 1;
+	flex-basis: 300px;
+	margin-right:10px;
+}
+#content main .table-data .todo .todo-list {
+	width: 100%;
+	
+}
+#content main .table-data .todo .todo-list li {
+	width: 100%;
+	margin-bottom:10px;
+	background: var(--gray);
+	border-radius: 10px;
+	padding: 10px 15px;
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+}
+#content main .table-data .todo .todo-list li .bx {
+	cursor: pointer;
+}
+/*#content main .table-data .todo .todo-list li.Done {
+	/*border-left: 10px solid var(--red);*/
+
+
+#content main .table-data .todo .todo-list li.In-Process {
+	border-left: 10px solid var(--yellow);
+}
+#content main .table-data .todo .todo-list li.Not-Done {
+	border-left: 10px solid var(--red);
+	
+/* MAIN */
+/* CONTENT */
+
+
+@media screen and (max-width: 600px) {
+	#content nav form .form-input input {
+		display: none;
+	}
+
+	#content nav form .form-input button {
+		width: auto;
+		height: auto;
+		background: transparent;
+		border-radius: none;
+		color: var(--dark);
+	}
+
+	#content nav form.show .form-input input {
+		display: block;
+		width: 100%;
+	}
+	#content nav form.show .form-input button {
+		width: 36px;
+		height: 100%;
+		border-radius: 0 36px 32px 0;
+		color: var(--light);
+		background: var(--red);
+	}
+
+	#content nav form.show ~ .notification,
+	#content nav form.show ~ .profile {
+		display: none;
+	}
+
+	#content main .box-info {
+		grid-template-columns: 1fr;
+	}
+
+	#content main .table-data .head {
+		min-width: 420px;
+	}
+	#content main .table-data .action table {
+		min-width: 420px;
+	}
+	#content main .table-data .todo .todo-list {
+		min-width: 420px;
+	}
+}

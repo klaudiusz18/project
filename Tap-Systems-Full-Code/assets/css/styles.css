@@ -1,0 +1,20 @@
+#upload-form {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    padding: 25px 25px 25px 25px;
+}
+
+#part-1-upload, #part-2-upload, #part-3-upload {
+    display: none;
+}
+
+#part-2-add, #part-3-add {
+    display: none;
+}
+
+/* Disable scrolling */
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
